@@ -9,3 +9,5 @@ ipykernel
 arxiv
 wikipedia
 pydantic
+pandas
+openpyxl

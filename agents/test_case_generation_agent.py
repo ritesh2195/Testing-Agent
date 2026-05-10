@@ -13,8 +13,12 @@ def generate_test_case_generation_agent(state):
         format_instructions=parser.get_format_instructions()
     )
 
+    if state.review_comments:
+        review_comments = state.review_comments.model_dump_json(indent=2)        
+
     formatted_prompt = prompt.invoke({
-        "requirements": state.requirements
+        "requirements": state.requirements,
+        "review_comments":state.review_comments
     })
 
     llm_response = llm.invoke(formatted_prompt)
@@ -23,5 +27,6 @@ def generate_test_case_generation_agent(state):
 
     return {
         "test_cases": parsed_output,
-        "messages": [llm_response]
+        "messages": [llm_response],
+        "iteration_count": state.iteration_count + 1
     }

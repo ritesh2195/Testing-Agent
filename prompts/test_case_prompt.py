@@ -8,6 +8,8 @@ def get_test_generation_prompt():
             "You are a senior QA automation engineer.\n"
             "Generate structured API test cases.\n\n"
             "{format_instructions}"
+            "Review comments on previous generates test case"
+            "{review_comments}"
         ),
 
         (
