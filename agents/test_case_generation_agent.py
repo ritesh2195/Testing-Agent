@@ -5,7 +5,7 @@ from prompts.test_case_prompt import get_test_generation_prompt
 
 def generate_test_case_generation_agent(state):
 
-    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
 
     parser = PydanticOutputParser(pydantic_object=TestSuite)
 

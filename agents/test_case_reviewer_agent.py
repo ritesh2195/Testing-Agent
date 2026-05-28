@@ -6,7 +6,7 @@ from models.test_case_review_model import TestCaseReport
 
 def review_test_case_agent(state: StateModel):
 
-    llm = ChatOpenAI(model="gpt-4o-mini",temperature=0.7)
+    llm = ChatOpenAI(model="gpt-4o-mini",temperature=0.1)
 
     parser = PydanticOutputParser(pydantic_object=TestCaseReport)
 

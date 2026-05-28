@@ -12,4 +12,5 @@ class StateModel(BaseModel):
     requirements:Optional[str] = Field(default=None,description="requirements in BDD format")
     test_cases:Optional[TestSuite] = Field(default=None,description="test cases")
     review_comments:Optional[TestCaseReport] = Field(default=None, description="review comment provided by reviewer agent")
+    automation_code: Optional[str] = Field(default=None, description="automation code generated")
     iteration_count:Optional[int] = 0
