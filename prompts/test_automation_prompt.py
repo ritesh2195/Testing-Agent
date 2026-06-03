@@ -34,6 +34,7 @@ Code Structure Requirements:
 - Create separate test methods for every test case
 - Keep setup reusable
 - Keep assertions clear and readable
+- do not add mark down in generated code
 """
             ),
             (
