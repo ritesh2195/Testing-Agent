@@ -2,8 +2,9 @@ from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import PydanticOutputParser
 from models.test_case_model import TestSuite
 from prompts.test_case_prompt import get_test_generation_prompt
+from models.state_model import StateModel
 
-def generate_test_case_generation_agent(state):
+def generate_test_case_generation_agent(state:StateModel):
 
     llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
 
